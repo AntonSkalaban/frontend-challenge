@@ -6,11 +6,10 @@ export const FavoriteSlice = createSlice({
   initialState: [] as CatCard[],
   reducers: {
     addCard: (state, { payload }: PayloadAction<CatCard>) => {
-      console.log("add");
       return state.concat(payload);
     },
+
     deleteCard: (state, { payload }: PayloadAction<string>) => {
-      console.log("delete");
       return state.filter((item) => item.id !== payload);
     },
   },
