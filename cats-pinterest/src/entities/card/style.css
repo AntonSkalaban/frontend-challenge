@@ -10,9 +10,11 @@
     width: 100%;
     height: 100%;
 }
+
 .card .heart-container {
     display: none;
 }
+
 .card:hover {
     transition: .6s;
     transform: scale(1.15);

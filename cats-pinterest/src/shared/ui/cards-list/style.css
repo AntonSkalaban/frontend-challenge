@@ -1,8 +1,15 @@
 .cards-list {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    
     gap: 48px;
-
     margin-bottom: 48px;
+}
+
+
+@media (max-width: 850px) {
+    .cards-list {
+        gap: 24px;
+    }
 }
