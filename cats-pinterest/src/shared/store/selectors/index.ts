@@ -1,1 +1,1 @@
-export * from "./getFavoriteCards";
+export * from "./favoriteCard";

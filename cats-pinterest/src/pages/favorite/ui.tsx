@@ -1,16 +1,16 @@
 import React from "react";
-import { Wrapper } from "shared/components/Wrapper/ui";
-import { CardsList } from "shared/components/cards-list/ui";
-import "./style.css";
 import { useSelector } from "react-redux";
-import { getFavoriteCards } from "shared/store/selectors";
+import { getFavoriteCards } from "shared/store";
+import { Wrapper, CardsList } from "shared/ui";
 
 export const Favorite = () => {
   const cards = useSelector(getFavoriteCards);
 
-  if (!cards || !cards.length) return "No Cards(";
+  if (!cards || !cards.length)
+    return <p className="message">Еще нет любымых котиков(</p>;
+
   return (
-    <div className="main">
+    <div className="page favorite">
       <Wrapper>
         <CardsList data={cards} />
       </Wrapper>

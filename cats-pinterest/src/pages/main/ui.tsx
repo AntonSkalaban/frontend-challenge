@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { cardAPI } from "shared/api";
-import { Wrapper } from "shared/components/Wrapper/ui";
-import { CardsList } from "shared/components/cards-list/ui";
-import "./style.css";
+import { Wrapper, CardsList } from "shared/ui";
 
 export const Main = () => {
   const [page, setPage] = useState(0);
@@ -21,17 +19,16 @@ export const Main = () => {
   }, [page, isFetching]);
 
   if (!data?.cards && isFetching)
-    return <p className="main__message">Загрузка первых котиков...</p>;
+    return <p className="message">Загрузка первых котиков...</p>;
   if (!data?.cards || !data.cards.length)
-    return <p className="main__message">Not found:(</p>;
-  if (isError) return <p className="main__message">Error</p>;
+    return <p className="message">Not found:(</p>;
+  if (isError) return <p className="message">Error</p>;
 
   return (
-    <div className="main">
+    <div className="page main">
       <Wrapper>
         <CardsList data={data.cards} />
-
-        <p className="main__message">Загружаем еще котиков...</p>
+        <p className="message">Загружаем еще котиков...</p>
       </Wrapper>
     </div>
   );

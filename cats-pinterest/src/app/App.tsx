@@ -1,10 +1,9 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import "./App.css";
+import { Layout } from "widgets";
+import { Main, Favorite } from "pages";
 import "assets/general.css";
-import { Layout } from "../Layout/Layout";
-import { Main } from "pages/main/ui";
-import { Favorite } from "pages/favorite/ui";
+import "./style.css";
 
 export const App = () => {
   return (

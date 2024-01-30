@@ -1,10 +1,9 @@
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getIsCardFavorite, addCard, deleteCard } from "shared/store";
+import { CatCard } from "shared/types";
 import Heart from "assets/image/svg/favorite.svg";
 import "./style.css";
-import { useDispatch, useSelector } from "react-redux";
-import { getIsCardFavorite } from "shared/store/selectors";
-import { addCard, deleteCard } from "shared/store/slice";
-import { CatCard } from "shared/types/type";
 
 interface FavoriteControllerProps {
   card: CatCard;

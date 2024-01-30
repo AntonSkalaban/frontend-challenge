@@ -1,6 +1,6 @@
 import React from "react";
-import { CatCard } from "shared/types/type";
-import { Card } from "features/card/ui";
+import { CatCard } from "shared/types";
+import { Card } from "entities";
 import "./style.css";
 
 interface CardsListProps {

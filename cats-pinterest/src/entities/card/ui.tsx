@@ -1,6 +1,6 @@
 import React from "react";
-import { CatCard } from "shared/types/type";
-import { FavoriteController } from "features/favConroller/ui";
+import { FavoriteController } from "features";
+import { CatCard } from "shared/types";
 import "./style.css";
 
 interface CardProps {

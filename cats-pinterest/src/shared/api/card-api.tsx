@@ -6,7 +6,6 @@ export const cardAPI = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: import.meta.env.VITE_API_URL,
   }),
-  tagTypes: ["Card"],
   endpoints: (build) => ({
     getCards: build.query<{ cards: CatCard[]; page: number }, number>({
       query: (page) => {
