@@ -1,0 +1,21 @@
+.nav {
+    display: flex;
+    height: 64px;
+}
+
+.nav__link:hover {
+    color: white;
+}
+.nav__link {
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+    color: white;
+    padding: 0 20px 0 20px;
+}
+
+.nav__link_active {
+    background-color: #1E88E5;
+}
+

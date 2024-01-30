@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
+      assets: "/src/assets",
       app: "/src/app",
       pages: "/src/pages",
       shared: "/src/shared",
