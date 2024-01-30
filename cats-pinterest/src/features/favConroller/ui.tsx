@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Heart from "assets/image/svg/favorite.svg";
 import "./style.css";
 import { useDispatch, useSelector } from "react-redux";
-import { getFavoriteCards, getIsCardFavorite } from "shared/store/selectors";
+import { getIsCardFavorite } from "shared/store/selectors";
 import { addCard, deleteCard } from "shared/store/slice";
 import { CatCard } from "shared/types/type";
 
@@ -14,8 +14,7 @@ export const FavoriteController: React.FC<FavoriteControllerProps> = ({
 }) => {
   const dispath = useDispatch();
   const isFavorite = useSelector(getIsCardFavorite(card.id));
-  const fav = useSelector(getFavoriteCards);
-  console.log(fav);
+
   const [isHover, setisHover] = useState(false);
 
   const handleHover = () => {
@@ -23,7 +22,6 @@ export const FavoriteController: React.FC<FavoriteControllerProps> = ({
   };
   const handleClick = () => {
     isFavorite ? dispath(deleteCard(card.id)) : dispath(addCard(card));
-    console.log(isFavorite, "add");
   };
 
   return (

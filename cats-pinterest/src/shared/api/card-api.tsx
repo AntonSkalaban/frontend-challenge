@@ -19,11 +19,11 @@ export const cardAPI = createApi({
         };
       },
 
-      providesTags: () => [{ type: "Card", id: "ALL" }],
+      // providesTags: () => [{ type: "Card", id: "ALL" }],
 
-      forceRefetch() {
-        return true;
-      },
+      // forceRefetch() {
+      //   return true;
+      // },
     }),
   }),
 });
