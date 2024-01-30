@@ -1,0 +1,28 @@
+.nav {
+    display: flex;
+    height: 64px;
+}
+
+.nav__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    color: rgba(255, 255, 255, 0.70);
+    padding: 0 20px 0 20px;
+
+    
+}
+
+.nav__link:hover, .nav__link_active {
+    background-color: #1E88E5;
+    color: white;
+}
+
+
+@media (max-width: 850px) {
+    .nav__item {
+        width: 50%;
+    }
+}
